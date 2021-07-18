@@ -1,0 +1,9 @@
+Git Repository Setup
+
+echo "# edr-monolithic-solution" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/HariharanThavaa/edr-monolithic-solution.git
+git push -u origin main
