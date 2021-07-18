@@ -1,0 +1,1 @@
+# edr-monolithic-solution
