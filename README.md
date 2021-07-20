@@ -20,23 +20,24 @@ Spring Boot
 Spring Boot is a framework that leverages Spring to quickly create stand-alone applications in java based languages.
 
 Bootstrapping an application, meaning the process to configure your spring application to have it up and running,
-Spring boot provides application with default configurations - Advantage
-If you rely too much on default you will loose control of awareness what happening - DisAdvantage
+1. Spring boot provides application with default configurations - Advantage
+2. If you rely too much on default you will loose control of awareness what happening - DisAdvantage
 
-spring-boot-starter-web - for standalone web application which groups Spring core web libraries, jackson (json handling), validation, logging, autoconfiguration and even an embedded Tomcat server.
-auto-configuration - scan your classpath, properties, components etc and load some extra beans and behavior based on that.
-Proiles - different configuration option, example dev and prod environment.
+1. spring-boot-starter-web - for standalone web application which groups Spring core web libraries, jackson (json handling), validation, logging, autoconfiguration and even an embedded Tomcat server.
+2. auto-configuration - scan your classpath, properties, components etc and load some extra beans and behavior based on that.
+3. Proiles - different configuration option, example dev and prod environment.
 
-Routing - Spring Cloud Gateway,
-Service Discovery - Consul,
-Load balancing - Spring cloud load balancer
+We use
+1. Routing - Spring Cloud Gateway
+2. Service Discovery - Consul
+3. Load balancing - Spring cloud load balancer
 
 Lombok And Java
 ==============
 Library that generates Java Code based on annotations.
 It keeps the code simple and concise, reducing the boilerplate so the reader can focus on what it matters.
 
-Key Lombok annotations
+###Key Lombok annotations
 @Value groups the other below mentioned annotations which will generate the code block before java build phase.
 1. @AllArgsConstructor - creates a constructor with all the existing fields.
 2. @FieldDefaults makes our fields private and final.
@@ -45,8 +46,8 @@ Key Lombok annotations
 5. @EqualsAndHashCode generates basic equal() and hashcode() methods, using all fields but we could also customise.
 
 Disadvantage
-You might add some that is not necessary
-IDE plugins needs to be installed
+1. You might add some stuff that is not necessary
+2. IDE plugins needs to be installed
 
 Lombok features that we use
 1. We annotate with @Value the immutable classes
@@ -86,7 +87,7 @@ public class MutiplicationServiceImplTest {
 }
 ```
 
-### Defining Custoom Behaviour with Mockito's when
+### Defining Custom Behaviour with Mockito's when
 Then we could use the static method Mockito.when to define custom behaviour
 ```
 when(attemptRepository.methodThatReturnSomething()).thenReturn(predefinedResponse);
@@ -110,7 +111,7 @@ The standard way to verify expected results with JUnit 5 is using Assertions.
 ```
 assertEquals("Hello, World!", actualGreeting);
 ```
-It can also verigy true/false, null, execution before timeout, throwing an exception etc
+It can also verify true/false, null, execution before timeout, throwing an exception etc
 Ref: https://tpd.io/junit-assert-docs
 
 AssertJ provides more readability and we can write more concise test
